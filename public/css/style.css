@@ -1,0 +1,333 @@
+/*-------------------- Global*------------------------------*/
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------------------- Body------------------------------*/
+body {
+    background-color: #ebebeb;
+}
+
+/*-------------------- Header------------------------------*/
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.hamburguer-button {
+    background-color: #03264c;
+    color: #ffff;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.logo{
+    width: 200px;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-navbar {
+    display: none;
+}
+
+.main-navbar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+@media (min-width: 768px) {
+    .main-header-top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .copy-header {
+        max-width: 350px;
+        text-align: right;
+    }
+    .hamburguer-button {
+        display: none;
+    }
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .main-navbar ul {
+        display: flex;
+    }
+    .main-navbar li {
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-header-top-bar, .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .main-header-top-bar{
+        align-items: center;
+    }
+    .logo{
+        width: 250px;
+    }
+    .copy-header {
+        max-width: none;
+        text-align: right;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+    .main-navbar {
+        margin-top: 25px;
+    }
+    .main-navbar li {
+        margin: 0 10px;
+    }
+    .main-navbar a {
+        font-size: 19px;
+    }
+}
+
+/*-------------------- Main------------------------------*/
+main {
+    width: 100%;
+    margin: auto;
+}
+
+.banner {
+    width: 100%;
+}
+
+/*-------------------- Section------------------------------*/
+section {
+    margin: auto;
+    width: 90%;
+}
+
+/*-------------------- Article------------------------------*/
+.card {
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+.precio-producto {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    border: solid 1px #ebebeb;
+    text-align: left;
+    border-bottom: none;
+}
+
+
+main section article i {
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a	;
+    background-color: #FFF;
+    border-radius: 50%;
+    right: 20px;
+    top: -15px;
+    margin-left: 80px;
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    color: rgb(103, 102, 102);
+    font-weight: 700;
+    text-align: left;
+    padding: 0px 15px 15px 15px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(103, 102, 102);
+    font-weight: 700;
+    text-align: left;
+    margin: 20px;
+    padding: 10px;
+}
+
+.descuento	 {
+    text-align: left;
+    color: green;
+    font-size: small;
+    font-weight: 600;
+}
+
+.precio {
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+    font-size: 25px;
+    color: #787777;
+    font-weight: 500;
+}
+
+article img {
+    width: 300px;
+    height:300px;
+    display: block;
+    margin: auto;
+}
+
+/*-------------------- Footer------------------------------*/
+footer{
+    background-color: white;
+}
+
+footer i {
+    text-align: center;
+    color: #1259c3;
+    font-size: 2em;
+}
+
+footer div{
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 2rem;
+}
+
+footer h2 {
+    text-align: center;
+    color: #666;
+    font-size: 1.5em;
+    
+}
+
+footer p {
+    text-align: center;
+    color: #bab8b8;
+    font-size: 1em;
+}
+
+@media (min-width: 376px) {
+    .list {
+        display: none;
+    }
+
+    .descripcion {
+        display: block;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo-search {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 5px;
+    }
+
+    .logo-search input {
+        width: 80%;
+    }
+}
+
+  @media (min-width: 796px) {
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .ofertas {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .list {
+        display: block;
+    }
+
+    .descripcion {
+        display: block;
+    }
+
+    .card {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .logo-search {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-grow: 0.5;
+    }
+
+   
+
+  }
+
+  @media (min-width: 1200px) {
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+  }
+
+
+/*-------------------- register login --------------------------------------------------------------*/
+/*-------------------- register login --------------------------------------------------------------*/
+.register-form {
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 30px;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.register-form h2 {
+    text-align: center;
+}
+
+.register-form div {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.register-form h4 { 
+    margin: 10px 10px 5px 10px;
+}
