@@ -15,6 +15,10 @@ body {
 .main-header {
     background-color: #EAC926;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .hamburguer-button {
@@ -31,7 +35,7 @@ body {
 }
 
 .logo{
-    width: 200px;
+    width: 60%;
 }
 
 .copy-header {
@@ -55,7 +59,13 @@ body {
     color: #222222;
     display: inline-block;
     padding: 5px 0px;
+    margin-left: 10px;
 }
+
+.search-bar {
+    width: 80%;
+}
+
 
 @media (min-width: 768px) {
     .main-header-top-bar {
@@ -119,18 +129,23 @@ main {
 
 .banner {
     width: 100%;
+    margin-top: 149px;
 }
 
 /*-------------------- Section------------------------------*/
 section {
     margin: auto;
     width: 90%;
+    margin-bottom: 60px;
+
 }
 
 /*-------------------- Article------------------------------*/
 .card {
     background-color: #FFF;
     margin-bottom: 10px;
+    width: 95%;
+    position: relative;
 }
 
 .precio-producto {
@@ -142,10 +157,10 @@ section {
     border: solid 1px #ebebeb;
     text-align: left;
     border-bottom: none;
+    position: relative;
 }
 
-
-main section article i {
+main section article .fa-truck{
     font-size: 16px;
     padding: 5px;
     width: 30px;
@@ -154,9 +169,14 @@ main section article i {
     color: #39b54a	;
     background-color: #FFF;
     border-radius: 50%;
-    right: 20px;
+    position: absolute;
     top: -15px;
-    margin-left: 80px;
+    right: 20px;
+    transition: transform .5s ease-in-out;
+}
+
+main section article .fa-truck:hover {
+    transform: rotate(-90deg);
 }
 
 .descripcion {
@@ -194,8 +214,8 @@ main h2 {
 }
 
 article img {
-    width: 300px;
-    height:300px;
+    width: 95%;
+    height:90%;
     display: block;
     margin: auto;
 }
@@ -203,12 +223,18 @@ article img {
 /*-------------------- Footer------------------------------*/
 footer{
     background-color: white;
+    width: 100%;
+    position:fixed;
+    bottom:0;
 }
 
 footer i {
     text-align: center;
     color: #1259c3;
     font-size: 2em;
+}
+footer i:hover {
+    color: #c37012ad;
 }
 
 footer div{
@@ -220,17 +246,21 @@ footer div{
 footer h2 {
     text-align: center;
     color: #666;
-    font-size: 1.5em;
+    font-size: 1.1em;
+    margin: 10px;
     
 }
 
 footer p {
     text-align: center;
     color: #bab8b8;
-    font-size: 1em;
+    font-size: 0.9em;
+    margin: 10px;
+    margin-bottom: 30px;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 374px) {
+   
     .list {
         display: none;
     }
@@ -240,7 +270,7 @@ footer p {
     }
 
     .logo {
-        width: 50%;
+        width: 60%;
     }
 
     .logo-search {
@@ -253,12 +283,25 @@ footer p {
     .logo-search input {
         width: 80%;
     }
+
+    footer {
+        position: unset;
+    }
 }
 
-  @media (min-width: 796px) {
-    .productos {
+@media (max-width: 766px) {
+    .banner {
+        margin-top: 190px;
+    }
+
+}
+
+
+
+@media (min-width: 766px) {
+    .productos .main-products {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
         justify-content: space-around;
     }
@@ -280,6 +323,7 @@ footer p {
 
     .card {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 40%;
     }
 
     .burger-menu {
@@ -293,18 +337,35 @@ footer p {
         flex-grow: 0.5;
     }
 
-   
+}
 
-  }
+@media (min-width: 1000px) {
 
-  @media (min-width: 1200px) {
+    .main-products, .productos {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+
+    .card img {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
     footer {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        height: 180px;
+        min-height: 150px;
+        width: 100%;
     }
-  }
+}
+
+
 
 
 /*-------------------- register login --------------------------------------------------------------*/
@@ -312,11 +373,12 @@ footer p {
 .register-form {
     text-align: center;
     margin: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 300px;
+    margin-bottom: 150px;
     padding: 30px;
     width: 80%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    max-width: 400px;
 }
 
 .register-form h2 {
@@ -332,3 +394,17 @@ footer p {
 .register-form h4 { 
     margin: 10px 10px 5px 10px;
 }
+
+.send-button {
+    width: 30%;
+    height: 30px;
+    background-color: #1259c3;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.send-button:hover {
+    background-color: #b7b4b3;
+}
+
